@@ -2,9 +2,10 @@
 This project was started in January 2018. Our goal is to create a "football oracle" which can predict game outcomes of the FIFA World Cup 2018.
 
 ## Collecting data
-We collected various tournament data from transfermarkt using python frameworks such as scrapy (for more details, see `scraper.ipynb`). During the data collecting phase, we encountered challenges such as
+We collected various tournament data from transfermarkt using python frameworks such as scrapy. During the data collecting phase, we encountered challenges such as
 * Data inconsistencies on the transfermarkt website: match lineups list wrong player data from time to time so that we cannot be certain of the quality of our collected data. Since transfermarkt was the most detailed website we have found for our purpose, we could not switch our data source and could only correct the inconsistencies manually to the best of our knowledge.
-* Missing data: players from less known teams often do not have a publicly available market value estimate. We solved this by imputing these missing values with the minimum value within the player's team (see `imputer.py`).
+* Missing data: players from less known teams often do not have a publicly available market value estimate. We solved this by imputing these missing values with the minimum value within the player's team.
+The source code can be found [here](https://github.com/ViviLearns2Code/ml-fifa)
 
 ## Data exploration
 The raw data which we collected for a single match is distributed over two files, one file contains the match result, the other contains the team's lineup statistics. We merge both files to one in which each row contains the following columns:
